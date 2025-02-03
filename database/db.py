@@ -1,5 +1,5 @@
 import sqlite3
-from database.models import init_db
+from models.models import init_db
 
 DB_PATH = "data/bot.db"
 
