@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  bot:
+    build: .
+    container_name: telegram_bot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data  # Persist SQLite database
+      - ./logs:/app/logs  # Persist logs
+    depends_on:
+      - db
+
+  db:
+    image: alpine
+    container_name: sqlite_db
+    volumes:
+      - ./data:/data  # Ensure SQLite database is persisted
+    command: [ "sh", "-c", "sleep infinity" ]  # Keep the container running
