@@ -1,0 +1,19 @@
+[project]
+name = "aiogram-bot-template"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Igor",email = "104066443+OldXrist@users.noreply.github.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiogram (>=3.17.0,<4.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
